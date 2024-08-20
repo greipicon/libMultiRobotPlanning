@@ -1,0 +1,57 @@
+[
+{
+  "directory": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/cmake-build-debug",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/include  -Wall -Wextra -g -std=c++14 -o CMakeFiles/a_star.dir/example/a_star.cpp.o -c /mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/a_star.cpp",
+  "file": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/a_star.cpp"
+},
+{
+  "directory": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/cmake-build-debug",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/include  -Wall -Wextra -g -std=c++14 -o CMakeFiles/a_star_epsilon.dir/example/a_star_epsilon.cpp.o -c /mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/a_star_epsilon.cpp",
+  "file": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/a_star_epsilon.cpp"
+},
+{
+  "directory": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/cmake-build-debug",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/include  -Wall -Wextra -g -std=c++14 -o CMakeFiles/assignment.dir/example/assignment.cpp.o -c /mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/assignment.cpp",
+  "file": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/assignment.cpp"
+},
+{
+  "directory": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/cmake-build-debug",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/include  -Wall -Wextra -g -std=c++14 -o CMakeFiles/cbs_roadmap.dir/example/cbs_roadmap.cpp.o -c /mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/cbs_roadmap.cpp",
+  "file": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/cbs_roadmap.cpp"
+},
+{
+  "directory": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/cmake-build-debug",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/include  -Wall -Wextra -g -std=c++14 -o CMakeFiles/cbs.dir/example/cbs.cpp.o -c /mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/cbs.cpp",
+  "file": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/cbs.cpp"
+},
+{
+  "directory": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/cmake-build-debug",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/include  -Wall -Wextra -g -std=c++14 -o CMakeFiles/cbs_ta.dir/example/cbs_ta.cpp.o -c /mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/cbs_ta.cpp",
+  "file": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/cbs_ta.cpp"
+},
+{
+  "directory": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/cmake-build-debug",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/include  -Wall -Wextra -g -std=c++14 -o CMakeFiles/ecbs.dir/example/ecbs.cpp.o -c /mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/ecbs.cpp",
+  "file": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/ecbs.cpp"
+},
+{
+  "directory": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/cmake-build-debug",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/include  -Wall -Wextra -g -std=c++14 -o CMakeFiles/ecbs_ta.dir/example/ecbs_ta.cpp.o -c /mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/ecbs_ta.cpp",
+  "file": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/ecbs_ta.cpp"
+},
+{
+  "directory": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/cmake-build-debug",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/include  -Wall -Wextra -g -std=c++14 -o CMakeFiles/next_best_assignment.dir/example/next_best_assignment.cpp.o -c /mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/next_best_assignment.cpp",
+  "file": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/next_best_assignment.cpp"
+},
+{
+  "directory": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/cmake-build-debug",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/include  -Wall -Wextra -g -std=c++14 -o CMakeFiles/sipp.dir/example/sipp.cpp.o -c /mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/sipp.cpp",
+  "file": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/sipp.cpp"
+},
+{
+  "directory": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/cmake-build-debug",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -I/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/include  -Wall -Wextra -g -std=c++14 -o CMakeFiles/mapf_prioritized_sipp.dir/example/mapf_prioritized_sipp.cpp.o -c /mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/mapf_prioritized_sipp.cpp",
+  "file": "/mnt/d/A_xmj/2022-2025/graduatepaper/libMultiRobotPlanning-main/libMultiRobotPlanning-main/example/mapf_prioritized_sipp.cpp"
+}
+]
