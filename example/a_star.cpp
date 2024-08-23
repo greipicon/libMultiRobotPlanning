@@ -117,16 +117,16 @@ class Environment {
 
   void onDiscover(const State& /*s*/, int /*fScore*/, int /*gScore*/) {}
 
-  int calculateTurnCost(const Action& currentAction, const Action& newAction) {
-    if (currentAction == newAction) {
+  int calculateTurnCost(const State& currentState, const State& newState) {
+    if (currentState.x == newState.x || currentState.y == newState.y) {
       return 0;
     } else {
       return 1;
     }
   }
 
-  int hCost(const State& s, const Action& currentAction, const Action& newAction) {
-    return admissibleHeuristic(s) + calculateTurnCost(currentAction , newAction);
+  int hCost(const State& current_s, const State& neighbor_s) {
+    return admissibleHeuristic(neighbor_s) + calculateTurnCost(current_s, neighbor_s);
   }
 
 
