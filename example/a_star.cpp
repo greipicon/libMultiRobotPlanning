@@ -10,6 +10,9 @@ using libMultiRobotPlanning::AStar;
 using libMultiRobotPlanning::Neighbor;
 using libMultiRobotPlanning::PlanResult;
 
+/** Define a structure called State，
+ *  to represent a point on a two-dimensional plane with x and y coordinates
+**/
 struct State {
   State(int x, int y) : x(x), y(y) {}
 
@@ -113,6 +116,14 @@ class Environment {
   void onExpandNode(const State& /*s*/, int /*fScore*/, int /*gScore*/) {}
 
   void onDiscover(const State& /*s*/, int /*fScore*/, int /*gScore*/) {}
+
+  int calculateTurnCost(const Action& currentAction, const Action& newAction) {
+    if (currentAction == newAction) {
+      return 0;
+    } else {
+      return 1;
+    }
+  }
 
  public:
   bool stateValid(const State& s) {
