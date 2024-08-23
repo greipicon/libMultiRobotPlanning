@@ -125,6 +125,11 @@ class Environment {
     }
   }
 
+  int hCost(const State& s, const Action& currentAction, const Action& newAction) {
+    return admissibleHeuristic(s) + calculateTurnCost(currentAction , newAction);
+  }
+
+
  public:
   bool stateValid(const State& s) {
     return s.x >= 0 && s.x < m_dimx && s.y >= 0 && s.y < m_dimy &&
