@@ -22,6 +22,8 @@ struct State {
     return std::tie(x, y) == std::tie(other.x, other.y);
   }
 
+  bool operator!=(const State& other) const { return !(*this == other); }
+
   friend std::ostream& operator<<(std::ostream& os, const State& s) {
     return os << "(" << s.x << "," << s.y << ")";
   }
