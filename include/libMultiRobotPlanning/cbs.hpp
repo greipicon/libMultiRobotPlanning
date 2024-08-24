@@ -237,6 +237,18 @@ class CBS {
       // m_env.onDiscoverLowLevel(s, m_agentIdx, m_constraints);
     }
 
+    int calculateTurnCost(const State& currentState, const State& newState) {
+      if (currentState.x == newState.x || currentState.y == newState.y) {
+        return 0;
+      } else {
+        return 1;
+      }
+    }
+
+    int hCost(const State& current_s, const State& neighbor_s) {
+      return admissibleHeuristic(neighbor_s) + calculateTurnCost(current_s, neighbor_s);
+    }
+
    private:
     Environment& m_env;
     // size_t m_agentIdx;
