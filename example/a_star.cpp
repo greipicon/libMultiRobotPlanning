@@ -126,7 +126,10 @@ class Environment {
   }
 
   int hCost(const State& current_s, const State& neighbor_s) {
-    return admissibleHeuristic(neighbor_s) + calculateTurnCost(current_s, neighbor_s);
+    int h = admissibleHeuristic(neighbor_s);
+    int turnCost = calculateTurnCost(current_s, neighbor_s);
+    std::cout << "h: " << h << " turnCost: " << turnCost << std::endl;
+    return h + turnCost;
   }
 
 
