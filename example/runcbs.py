@@ -5,7 +5,8 @@ base_command = 'C:\\Windows\\system32\\wsl.exe --distribution Ubuntu --exec /bin
 
 # 设置输入和输出目录
 input_dir = "../benchmark/32x32_obst204"
-output_dir = "../benchmark/output"
+output_dir = "../benchmark/changed_output"
+# output_dir = "../benchmark/original_output"
 txt_output_path = "../benchmark/command-line.txt"
 
 # 转换路径为 WSL 格式
