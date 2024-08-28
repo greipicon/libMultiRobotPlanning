@@ -119,8 +119,7 @@ class AStar {
           auto iter = stateToHeap.find(neighbor.state);
           if (iter == stateToHeap.end()) {  // Discover a new node
             Cost fScore =
-//                tentative_gScore + m_env.admissibleHeuristic(neighbor.state);
-                tentative_gScore + m_env.hCost(current.state, neighbor.state);
+                tentative_gScore + m_env.admissibleHeuristic(neighbor.state);
             auto handle =
                 openSet.push(Node(neighbor.state, fScore, tentative_gScore));
             (*handle).handle = handle;
