@@ -84,6 +84,37 @@ class AStar {
 
     while (!openSet.empty()) {
       Node current = openSet.top();
+
+      auto cameFromIter = cameFrom.find(current.state);
+      if (cameFromIter != cameFrom.end()) {
+        State statePar = std::get<0>(cameFromIter->second);
+        Action actionToCurr = std::get<1>(cameFromIter->second);
+
+        if (!(statePar == startState)) {
+          cameFromIter = cameFrom.find(statePar);
+          if (cameFromIter != cameFrom.end()) {
+            Action actionToPar = std::get<1>(cameFromIter->second);
+
+            State stateSameAction = statePar;
+            if(actionToPar != actionToCurr){
+              if (actionToPar == Action::Up) stateSameAction.y++;
+              if (actionToPar == Action::Down) stateSameAction.y--;
+              if (actionToPar == Action::Left) stateSameAction.x--;
+              if (actionToPar == Action::Right) stateSameAction.x++;
+              if(m_env.stateValid(stateSameAction)){
+                auto it = stateToHeap.find(stateSameAction);
+                if (it != stateToHeap.end()) {
+                  Node& newNode = *it->second;
+                  if(newNode.fScore == current.fScore){
+                    current = newNode;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
       m_env.onExpandNode(current.state, current.fScore, current.gScore);
 
       if (m_env.isSolution(current.state)) {
