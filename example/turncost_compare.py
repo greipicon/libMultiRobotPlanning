@@ -2,7 +2,7 @@ import yaml
 import os
 
 
-# 读取YAML文件
+
 def read_yaml_file(file_path):
     with open(file_path, 'r') as file:
         return yaml.safe_load(file)
@@ -10,16 +10,16 @@ def read_yaml_file(file_path):
 
 def caculate_a_agent_turns(agent, path):
     turns = 0
-    # 初始化上一个位置
+
     prev_pos = path[0]
-    # 初始化上一个方向, 设 2: up, 3: down, 4: left, 5: right
+
     prev_direction = None
-    # 初始化转向次数
+
     turn_count = 0
 
-    # 遍历路径中的每个位置
+
     for pos in path:
-        # 计算当前位置和上一个位置之间的方向
+
         direction = None
         if prev_pos!= None:
             dx = pos['x'] - prev_pos['x']
@@ -40,7 +40,7 @@ def caculate_a_agent_turns(agent, path):
         prev_pos = pos
     return turns
 
-# 计算转向次数
+
 def calculate_turns(schedule):
     agent_turns = []
     total_turns = 0
@@ -68,7 +68,7 @@ def run(file_dir, output_file_dir):
             result = calculate_turns(schedule)
             write_results_to_file(result, output_file_path)
 
-# 主函数
+
 def main():
     original_file_dir = '../benchmark/original_output/'
     changed_file_dir = '../benchmark/changed_output/'
@@ -81,29 +81,29 @@ def main():
 
     files_original = [f for f in os.listdir(output_original_file_dir) if f.endswith('.yaml')]
 
-    # 打开用于写入比较结果的文件
+
     with open('../benchmark/compare_results.txt', 'w') as result_file:
         for file_name in files_original:
-            # 构造文件夹A和B中文件的完整路径
+
             file_path_ori = os.path.join(output_original_file_dir, file_name)
             file_path_cha = os.path.join(output_changed_file_dir, file_name)
 
-            # 检查文件夹B是否有相同名称的文件
+
             if os.path.exists(file_path_cha):
-                # 打开文件夹A中的文件并读取第一行
+
                 with open(file_path_ori, 'r') as file_a:
                     line_a = file_a.readline().strip()
-                    original = int(line_a.split('=')[1])  # 从等号后面提取数字
+                    original = int(line_a.split('=')[1])
 
-                # 打开文件夹B中的文件并读取第一行
+
                 with open(file_path_cha, 'r') as file_b:
                     line_b = file_b.readline().strip()
-                    changed = int(line_b.split('=')[1])  # 从等号后面提取数字
+                    changed = int(line_b.split('=')[1])
 
-                # 计算两个数字之差
+
                 compared = original - changed
 
-                # 将结果写入compare_results.txt
+
                 result_file.write(
                     f"{file_name}        original={original}    changed={changed}        compared={compared}\n")
             else:
