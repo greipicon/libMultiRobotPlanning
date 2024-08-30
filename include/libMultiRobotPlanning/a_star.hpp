@@ -90,7 +90,7 @@ class AStar {
         State statePar = std::get<0>(cameFromIter->second);
         Action actionToCurr = std::get<1>(cameFromIter->second);
 
-        if (!(statePar == startState)) {
+        if (!(statePar.x == startState.x && statePar.y == startState.y)) {
           cameFromIter = cameFrom.find(statePar);
           if (cameFromIter != cameFrom.end()) {
             Action actionToPar = std::get<1>(cameFromIter->second);
