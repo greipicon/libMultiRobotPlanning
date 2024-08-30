@@ -237,6 +237,8 @@ class CBS {
       // m_env.onDiscoverLowLevel(s, m_agentIdx, m_constraints);
     }
 
+    bool stateValid(const State& s) { return m_env.stateValid(s); }
+
    private:
     Environment& m_env;
     // size_t m_agentIdx;
