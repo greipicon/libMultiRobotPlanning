@@ -417,6 +417,14 @@ class Environment {
 
   int lowLevelExpanded() const { return m_lowLevelExpanded; }
 
+  bool stateValid(const State& s) {
+    assert(m_constraints);
+    const auto& con = m_constraints->vertexConstraints;
+    return s.x >= 0 && s.x < m_dimx && s.y >= 0 && s.y < m_dimy &&
+           m_obstacles.find(Location(s.x, s.y)) == m_obstacles.end() &&
+           con.find(VertexConstraint(s.time, s.x, s.y)) == con.end();
+  }
+
  private:
   State getState(size_t agentIdx,
                  const std::vector<PlanResult<State, Action, int> >& solution,
@@ -435,13 +443,7 @@ class Environment {
     return solution[agentIdx].states.back().first;
   }
 
-  bool stateValid(const State& s) {
-    assert(m_constraints);
-    const auto& con = m_constraints->vertexConstraints;
-    return s.x >= 0 && s.x < m_dimx && s.y >= 0 && s.y < m_dimy &&
-           m_obstacles.find(Location(s.x, s.y)) == m_obstacles.end() &&
-           con.find(VertexConstraint(s.time, s.x, s.y)) == con.end();
-  }
+
 
   bool transitionValid(const State& s1, const State& s2) {
     assert(m_constraints);
