@@ -20,6 +20,9 @@ struct State {
     return time == s.time && x == s.x && y == s.y;
   }
 
+  int getX() const { return x; }
+  int getY() const { return y; }
+
   bool equalExceptTime(const State& s) const { return x == s.x && y == s.y; }
 
   friend std::ostream& operator<<(std::ostream& os, const State& s) {
