@@ -22,6 +22,7 @@ struct State {
 
   int getX() const { return x; }
   int getY() const { return y; }
+  int getTime() const { return time; }
 
   bool equalExceptTime(const State& s) const { return x == s.x && y == s.y; }
 
