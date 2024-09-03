@@ -15,6 +15,7 @@ using libMultiRobotPlanning::PlanResult;
 
 struct State {
   State(int time, int x, int y) : time(time), x(x), y(y) {}
+  State() : time(0), x(0), y(0) {}
 
   bool operator==(const State& s) const {
     return time == s.time && x == s.x && y == s.y;
