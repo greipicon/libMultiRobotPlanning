@@ -172,6 +172,11 @@ class AStar {
             Cost delta = (*handle).gScore - tentative_gScore;
             (*handle).gScore = tentative_gScore;
             (*handle).fScore -= delta;
+              if (handle != nullptr && openSet.is_valid(handle)) {
+                  std::cout << "Updating node with fScore: " << (*handle).fScore << " and gScore: " << (*handle).gScore << std::endl;
+              } else {
+                  std::cerr << "Invalid handle detected." << std::endl;
+              }
             openSet.increase(handle);
             m_env.onDiscover(neighbor.state, (*handle).fScore,
                              (*handle).gScore);
