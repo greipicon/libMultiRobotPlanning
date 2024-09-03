@@ -95,7 +95,7 @@ class AStar {
           if (cameFromIter != cameFrom.end()) {
             Action actionToPar = std::get<1>(cameFromIter->second);
             // 在该分支，只考虑CBS算法，不考虑对其他算法的影响，因此在代码里更新t
-            State stateSameAction(statePar.x, statePar.y, statePar.time + 1);
+            State stateSameAction(statePar.time + 1, statePar.x, statePar.y);
 
             if(actionToPar != actionToCurr){
               if (actionToPar == Action::Up) stateSameAction.y++;
