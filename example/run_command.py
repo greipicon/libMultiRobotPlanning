@@ -1,24 +1,35 @@
 import subprocess
-import sys
+import signal
+
+TIMEOUT = 120
+
+def execute_command(command):
+    try:
+
+        process = subprocess.Popen(command, shell=True)
+
+        process.wait(timeout=TIMEOUT)
+    except subprocess.TimeoutExpired:
+
+        process.kill()
+
+        process.communicate()
+        print("fail")
+    except Exception as e:
+
+        print(f"An error occurred: {e}")
+
+def main():
+
+    with open('../benchmark/command-line.txt', 'r') as file:
+        commands = file.readlines()
 
 
-with open('../benchmark/command-line.txt', 'r') as file:
-
-    for line in file:
-
-        command = line.strip()
-
+    for command in commands:
+        command = command.strip()
         if command:
-            print(f"Executing command: {command}")
-            try:
+            print(f"Executing: {command}")
+            execute_command(command)
 
-                result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-                print(result.stdout.decode())
-
-                if result.stderr:
-                    print("Error:", result.stderr.decode(), file=sys.stderr)
-            except subprocess.CalledProcessError as e:
-
-                print(f"An error occurred while executing command: {command}", file=sys.stderr)
-                print(e, file=sys.stderr)
+if __name__ == "__main__":
+    main()
